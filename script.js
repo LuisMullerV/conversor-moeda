@@ -11,7 +11,7 @@ document.getElementById('converter-form').addEventListener('submit', async funct
     }
 
     try {
-        const proxyUrl = "https://corsproxy.io/?";
+        const proxyUrl = "https://api.allorigins.win/raw?url=";
         const apiUrl = `${proxyUrl}https://api.exchangerate.host/convert?from=${fromCurrency}&to=${toCurrency}&amount=${amount}`;
         const response = await fetch(apiUrl);
         const data = await response.json();
